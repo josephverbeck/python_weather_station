@@ -23,7 +23,7 @@ EnvironmentHelper.set_environment()
 
 api.add_resource(Version, '/api/v1/version')
 
-api.add_resource(Sensor, 'api/v1/pure_read')
+api.add_resource(Sensor, '/api/v1/pure_read')
 
 if __name__ == '__main__':
     print "starting server on port 21405"
