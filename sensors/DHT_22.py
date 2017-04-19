@@ -8,5 +8,5 @@ class DHT_22(object):
 
 
     def get_pure_read(self):
-        humidity, temperature = Adafruit_DHT.read_retry(self.sensor, 22)
+        humidity, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 22)
         return {'humidity': humidity, 'temperature': temperature}
