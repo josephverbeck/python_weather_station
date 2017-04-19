@@ -8,4 +8,5 @@ class Sensor(Resource):
 
     def get(self):
         humitity, temp = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 22)
+        temp = int(round(temp)) * 1.8 + 32
         return jsonify({'humitity': humitity, 'temperature': temp})
